@@ -16,5 +16,8 @@ jobs:
        run: tree
 
      - name: Greet the user
-       run: echo "Hello ${{github.actor}}"
+       run: |
+        echo "Hello '${{github.actor}}'."
+        echo "My API key will '${{ secrets.APIKEY }}'."
+        echo "My Persekitaran is '${{ vars.PERSEKITARAN }}'."
        shell: bash
