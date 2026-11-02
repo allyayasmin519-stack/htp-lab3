@@ -12,6 +12,7 @@ jobs:
     steps:
      - name: Checkout Repository Code
        uses: actions/checkout@v4
+     - name: Display repository tree
        run: tree
 
      - name: Greet the user
