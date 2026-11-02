@@ -1,0 +1,13 @@
+name: my first workflow
+on: [push]
+  branches:
+    -main
+
+jobs: 
+  first_job:
+    name: my first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the user
+        run: echo "Hello ${{github.actor}}"
+        shell: bash
